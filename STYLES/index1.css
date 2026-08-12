@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*GERAL*/
+body {
+    background-color: #fdf0f9;
+}
+
+body.tema-escuro {
+    background-color: #17121c;
+}
+
+body.tema-escuro .toggle-thumb {
+    background-color: #251c2d;
+}
+
+
+/*HEADER*/
+header {
+    border-bottom: 2px solid #c084fc2e;
+}
+
+header h1 {
+    font-family: 'Poppins';
+    font-size: 24px;
+}
+
+header h1 .titulo-roxo {
+    color: #a855f7;
+}
+
+header .icon {
+    width: 22px;      
+    height: 22px;
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    margin: auto;
+}
+
+
+/*BOTÃO DE TEMA CLARO / TEMA ESCURO*/
+#mudar-tema {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 800;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.toggle-thumb .tema-escuro  {
+    border: 0.5px solid #a855f7;
+}
+
+.toggle-thumb {  
+    border-radius: 50%;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    width: 40px;      
+    height: 40px;     
+    padding: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.tema-escuro {
+    left: 10px;
+    color: #ffffff;
+}
+
+.icone-sol {
+    stroke: #a855f7;
+    opacity: 1;
+    display: none;
+}
+
+.icone-lua {
+    stroke: #a855f7;
+    display: block;
+}
+
+#mudar-tema.noite .icone-lua {
+    display: none;
+}
+
+#mudar-tema.noite .icone-sol {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*RODAPÉ*/
+footer {
+    border-top: 2px solid #c084fc2e;
+    display: flex;
+    gap: 240px;
+}
+
+.tirar_now {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(168,85,247,1), rgba(236,72,153,1));
+    border-radius: 30%;
+}
+
+.tirar_now .icon {
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: #ffffff;
+}
+
+footer a p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.feed {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border-bottom: 4px solid #a855f7;
+    color: #a855f7;
+}
+
+.feed a {
+    margin-top: 5px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.feed p {
+    text-decoration: none;
+}
+
+.feed svg {
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+
+.perfil {
+    position: relative;
+    display: flex;
+    padding-right: 10px;
+    border-bottom: 4px solid #ffffff;
+}
+
+.perfil a {
+    margin-top: 5px;
+    margin-left: 3px;
+    color: #a855f7;
+    text-decoration: none;
+}
+
+.perfil svg {
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+
+.perfil:hover {
+    border-bottom: 4px solid #E9D5FF;
+}
+
+.perfil:hover a{
+    color: #a855f7;
+}

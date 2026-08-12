@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NowPlace</title>
+    <link rel="stylesheet" href="/STYLES/index2.css">
+</head>
+<body>
+    <header>
+        <h1><span class="titulo-branco">Now</span><span class="titulo-roxo">Place</span></h1>
+        <button id="mudar-tema" class="dia" type="button" aria-label="Alternar tema">
+            <div class="toggle-thumb">
+                <svg class="icon icone-sol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+
+                <svg class="icon icone-lua" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </div>
+        </button>
+    </header>
+
+    <div class="passo_1" id="passo_1">
+        <h1>Onde você está?</h1>
+        <p>Tire uma foto do ambiente ao seu redor</p>
+        <div id="camera-container">
+            <video id="video" autoplay playsinline></video>
+            <canvas id="canvas" style="display: none;"></canvas>
+            <br>
+
+            <button id="btn-foto">Tirar Foto</button>
+        </div>
+    </div>
+
+    <div class="passo_2" id="passo_2">
+        <h1>E você?</h1>
+        <p>Agora uma selfie mostrando seu rosto</p>
+        <div id="camera-container">
+            <video id="video" autoplay playsinline></video>
+            <canvas id="canvas" style="display: none;"></canvas>
+            <br>
+
+            <button id="btn-foto">Tirar Foto</button>
+        </div>
+    </div>    
+
+    <div class="passo_3" id="passo_3">
+        <h1>O que você está fazendo?</h1>
+        <p>Uma frase curta sobre o momento</p>
+        <div id="camera-container">
+            <video id="video" autoplay playsinline></video>
+
+            <br>
+
+        </div>
+
+        <div class="localizacao">
+            <span class="pin">📍</span>
+            <span class="label carregando" id="localizacao-label">Obtendo localização...</span>
+        </div>
+
+        <div class="input">
+            <textarea class="desc" id="descricao" maxlength="120" placeholder="Ex: Trabalhando no meu projeto favorito!"></textarea>
+            <span class="contador_caracter" id="contador">0/120</span>
+        </div>
+    </div>  
+    
+    <button type="button" class="postar_button" onclick="tarefaController.postarNow()">Postar Now</button>
+
+
+<script src="/SCRIPTS/index.js"></script>
+</body>
+</html>

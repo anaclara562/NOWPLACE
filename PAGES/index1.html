@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NowPlace</title>
+    <link rel="stylesheet" href="/STYLES/index1.css">
+</head>
+<body>
+    <header>
+        <h1><span class="titulo-branco">Now</span><span class="titulo-roxo">Place</span></h1>
+        <button id="mudar-tema" class="dia" type="button" aria-label="Alternar tema">
+            <div class="toggle-thumb">
+                <svg class="icon icone-sol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+
+                <svg class="icon icone-lua" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </div>
+        </button>
+    </header>
+
+
+    <div class="card">
+        <div class="icon-cadeado">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="30" fill="#a855f7">
+                <path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm0-80h480v-400H240v400ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80ZM240-160v-400 400Z"/>
+            </svg>
+        </div>
+        <div class="infos">
+            <h2>Compartilhe para ver</h2>
+            <p>Poste um Now para desbloquear os de outras pessoas próximas</p>
+        </div>
+        <a href="/PAGES/index2.html">
+            Postar
+        </a>
+    </div>
+
+    <h3>POR PERTO</h3>
+
+    <div id="Nows-outros">
+
+    </div>
+
+    <footer>
+        
+        <a class="feed" href="index1.html">
+            <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="7"r="3"stroke="#A855F7"stroke-width="2"stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 20C4 16.6863 6.68629 14 10 14C13.3137 14 16 16.6863 16 20"stroke="#A855F7"stroke-width="2"stroke-linecap="round"stroke-linejoin="round"/>
+                <path d="M15 4.5C16.6569 4.5 18 5.84315 18 7.5C18 9.15685 16.6569 10.5 15 10.5" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18 14C20.2091 14.4903 21.5 16.3005 21.5 18.5"stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>feed</p>
+        </a>
+
+        <a class="tirar_now" href="index2.html">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" fill="#f0ffff">
+                <path d="M480-264q72 0 120-49t48-119q0-69-48-118.5T480-600q-72 0-120 49.5t-48 119q0 69.5 48 118.5t120 49Zm0-72q-42 0-69-28.13T384-433q0-39.9 27-67.45Q438-528 480-528t69 27.55q27 27.55 27 67.45 0 40.74-27 68.87Q522-336 480-336ZM168-144q-29 0-50.5-21.5T96-216v-432q0-29 21.5-50.5T168-720h120l72-96h240l72 96h120q29.7 0 50.85 21.5Q864-677 864-648v432q0 29-21.15 50.5T792-144H168Zm0-72h624v-432H636l-72.1-96H396l-72 96H168v432Zm312-217Z"/>
+            </svg>
+        </a>
+
+        <a class="perfil" href="index3.html">
+            <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12"cy="7"r="4"stroke="#A855F7"stroke-width="2"stroke-linecap="round"stroke-linejoin="round"/>
+                <path d="M5 21V19C5 15.6863 7.68629 13 11 13H13C16.3137 13 19 15.6863 19 19V21"stroke="#A855F7"stroke-width="2"stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>você</p>
+        </a>
+    </div>
+
+    <script src="/SCRIPTS/index.js"></script>
+</body>
+</html>
