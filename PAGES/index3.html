@@ -9,26 +9,63 @@
 <body>
     <header>
         <h1><span class="titulo-branco">Now</span><span class="titulo-roxo">Place</span></h1>
-        <button id="mudar-tema" class="dia" type="button" aria-label="Alternar tema">
-            <div class="toggle-thumb">
-                <svg class="icon icone-sol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        <div class="abas">  
+            <a class="feed" href="index1.html">
+                <svg class="icone" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="7"r="3"stroke="#A855F7"stroke-width="2"stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 20C4 16.6863 6.68629 14 10 14C13.3137 14 16 16.6863 16 20"stroke="#A855F7"stroke-width="2"stroke-linecap="round"stroke-linejoin="round"/>
+                    <path d="M15 4.5C16.6569 4.5 18 5.84315 18 7.5C18 9.15685 16.6569 10.5 15 10.5" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18 14C20.2091 14.4903 21.5 16.3005 21.5 18.5"stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
+            </a>
 
-                <svg class="icon icone-lua" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            <a class="tirar_now" href="index2.html">
+                <svg class="icone" xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" fill="#a855f7">
+                    <path d="M480-260q75 0 127.5-52.5T660-440q0-75-52.5-127.5T480-620q-75 0-127.5 52.5T300-440q0 75 52.5 127.5T480-260Zm0-80q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM160-120q-33 0-56.5-23.5T80-200v-480q0-33 23.5-56.5T160-760h126l74-80h240l74 80h126q33 0 56.5 23.5T880-680v480q0 33-23.5 56.5T800-120H160Zm0-80h640v-480H638l-73-80H395l-73 80H160v480Zm320-240Z"/>
                 </svg>
-            </div>
-        </button>
+            </a>
+
+            <button id="mudar-tema" class="dia" type="button" aria-label="Alternar tema">
+                <div class="toggle-thumb">
+                    <svg class="icon icone-sol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+
+                    <svg class="icon icone-lua" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </div>
+            </button>
+        </div>
     </header>
+
+    <div class="titulo-pagina">
+        <h1>Seus Nows</h1>
+    </div>
+    <div class="card" id="card-vazio">
+        <div class="icon-camera">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" fill="#f0ffff">
+                <path d="M480-264q72 0 120-49t48-119q0-69-48-118.5T480-600q-72 0-120 49.5t-48 119q0 69.5 48 118.5t120 49Zm0-72q-42 0-69-28.13T384-433q0-39.9 27-67.45Q438-528 480-528t69 27.55q27 27.55 27 67.45 0 40.74-27 68.87Q522-336 480-336ZM168-144q-29 0-50.5-21.5T96-216v-432q0-29 21.5-50.5T168-720h120l72-96h240l72 96h120q29.7 0 50.85 21.5Q864-677 864-648v432q0 29-21.15 50.5T792-144H168Zm0-72h624v-432H636l-72.1-96H396l-72 96H168v432Zm312-217Z"/>
+            </svg>
+        </div>
+        <div class="infos">
+            <h2>Nenhum Now ainda</h2>
+            <p>Compartilhe o que você está fazendo agora!</p>
+        </div>
+    </div>
+
+    <div id="galeria"></div>
+
+
+
 
 <script src="/SCRIPTS/index.js"></script>
 </body>

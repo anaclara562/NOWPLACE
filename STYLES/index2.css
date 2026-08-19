@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*GERAL*/
+::-webkit-scrollbar { 
+  display: none; 
+}
+
 body {
-  background-color: #fdf0f9;
+  background-color: #fce7f3;
 }
 
 body.tema-escuro {
@@ -17,11 +21,14 @@ body.tema-escuro .toggle-thumb {
 /*HEADER*/
 header {
   border-bottom: 2px solid #c084fc2e;
+  display: flex;
+  gap: 930px;
 }
 
 header h1 {
   font-family: 'Poppins';
-  font-size: 24px;
+  font-size: 29px;
+  margin-left: 40px;
 }
 
 header h1 .titulo-roxo {
@@ -29,8 +36,8 @@ header h1 .titulo-roxo {
 }
 
 header .icon {
-  width: 22px;      
-  height: 22px;
+  width: 28px;      
+  height: 28px;
   position: absolute;
   top: 0; 
   bottom: 0;
@@ -39,13 +46,23 @@ header .icon {
   margin: auto;
 }
 
+header .abas {
+  display: flex;
+  gap: 100px;
+}
+
+header .icone {
+  position: relative;
+  display: flex;
+  width: 33px;      
+  height: 33px;
+  padding-top: 25px;
+}
+
 
 /*BOTÃO DE TEMA CLARO / TEMA ESCURO*/
 #mudar-tema {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 800;
+  position: relative;
   background: none;
   border: none;
   padding: 0;
@@ -65,8 +82,8 @@ header .icon {
   z-index: 2;
   transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   position: relative;
-  width: 40px;      
-  height: 40px;     
+  width: 44px;      
+  height: 44px;     
   padding: 4px;
   box-sizing: border-box;
   overflow: hidden;
@@ -96,9 +113,108 @@ header .icon {
   display: block;
 }
 
+.progresso {
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto 40px;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    position: relative;
+}
 
+.linha {
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    width: 80%;
+    height: 4px;
+
+    background: #ddd;
+    z-index: 0;
+}
+
+.etapa {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #999;
+}
+
+.etapa span {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ddd;
+    color: white;
+
+    font-weight: bold;
+}
+
+.etapa p {
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+/* etapa atual */
+.etapa.ativa span {
+    background: linear-gradient(135deg, #ff007e, #8600ff);
+}
+
+.etapa.ativa {
+    color: #8600ff;
+    font-weight: bold;
+}
+
+.passo {
+    display: none;
+}
+
+.passo.ativo {
+    display: block;
+}
+
+.fotos {
+    position: relative;
+    height: 300px;
+}
+
+.foto {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: grab;
+    transition: 0.3s;
+}
+
+.foto:active {
+    cursor: grabbing;
+}
+
+.selfie {
+    height: 240px;
+    top: 20px;
+    z-index: 2;
+}
+
+.ambiente {
+    height: 140px;
+
+    z-index: 100;
+    border: 4px solid white;
+}
 
 
 
@@ -148,12 +264,14 @@ header .icon {
 
 /*DESCRIÇÃO DA FOTO*/
 .input {
+  margin-top: 40px;
   position: relative;
   width: 100%;
   max-width: 420px;
 }
 
 .desc {
+  margin: 0 auto;
   width: 100%;
   min-height: 100px;
   resize: none;
@@ -193,6 +311,7 @@ header .icon {
 
 /*BOTÃO DE POSTAGEM*/
 .postar_button {
+  margin-top: 40px;
   font-family: "Wix Madefor Text", sans-serif;
   font-weight: 600;
   font-size: 17px;
@@ -206,4 +325,9 @@ header .icon {
   width: 170px;
   height: 40px;
   padding: 10px;
+}
+
+.conteudo {
+  margin: auto;
+  text-align: center;
 }

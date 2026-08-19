@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*GERAL*/
+::-webkit-scrollbar { 
+  display: none; 
+}
+
 body {
-    background-color: #fdf0f9;
+    background-color: #fce7f3;
 }
 
 body.tema-escuro {
@@ -17,11 +21,14 @@ body.tema-escuro .toggle-thumb {
 /*HEADER*/
 header {
     border-bottom: 2px solid #c084fc2e;
+    display: flex;
+    gap: 930px;
 }
 
 header h1 {
     font-family: 'Poppins';
-    font-size: 24px;
+    font-size: 29px;
+    margin-left: 40px;
 }
 
 header h1 .titulo-roxo {
@@ -29,8 +36,8 @@ header h1 .titulo-roxo {
 }
 
 header .icon {
-    width: 22px;      
-    height: 22px;
+    width: 28px;      
+    height: 28px;
     position: absolute;
     top: 0; 
     bottom: 0;
@@ -39,13 +46,23 @@ header .icon {
     margin: auto;
 }
 
+header .abas {
+    display: flex;
+    gap: 100px;
+}
+
+header .icone {
+    position: relative;
+    display: flex;
+    width: 33px;      
+    height: 33px;
+    padding-top: 25px;
+}
+
 
 /*BOTÃO DE TEMA CLARO / TEMA ESCURO*/
 #mudar-tema {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 800;
+    position: relative;
     background: none;
     border: none;
     padding: 0;
@@ -65,8 +82,8 @@ header .icon {
     z-index: 2;
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     position: relative;
-    width: 40px;      
-    height: 40px;     
+    width: 44px;      
+    height: 44px;     
     padding: 4px;
     box-sizing: border-box;
     overflow: hidden;
@@ -96,101 +113,71 @@ header .icon {
     display: block;
 }
 
-
-
-
-
-
-
-
-
-
-
-/*RODAPÉ*/
-footer {
-    border-top: 2px solid #c084fc2e;
-    display: flex;
-    gap: 240px;
-}
-
-.tirar_now {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, rgba(168,85,247,1), rgba(236,72,153,1));
-    border-radius: 30%;
-}
-
-.tirar_now .icon {
-    align-items: center;
-    justify-content: center;
-}
-
-footer {
-    justify-content: center;
-    display: flex;
+.card {
+    width: 700px;
+    background: linear-gradient( to right,
+        rgba(204, 170, 234, 0.76) 0%,
+        rgba(217, 88, 153, 0.536) 100%
+    );
+    border-radius: 20px;
+    display: inline-flex;
     align-items: center;
     gap: 40px;
-    background: #ffffff;
+    margin: 0 auto;
+    border: 1px solid #c084fc;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
-footer a p {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    text-decoration: none;
+.card .base-icone {
+    border-radius: 50%;
+    background-color: rgb(203, 166, 235);
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    width: 50px;      
+    height: 50px;     
+    padding: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.card .icone-cadeado {
+    width: 28px;      
+    height: 28px;
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    margin: auto;
+}
+
+.card h2 {
+    margin-bottom: 0px;
+}
+
+.card p {
+    margin-top: 9px;
+    color: #490a83;
+}
+
+.card a {
+    border-radius: 19px;
+    width: 80px;
+    height: 40px;
     display: flex;
     align-items: center;
-    gap: 8px;
-    transition: 0.3s;
-}
-
-.feed {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    border-bottom: 4px solid #a855f7;
-    color: #a855f7;
-}
-
-.feed a {
-    margin-top: 5px;
-    margin-left: 10px;
+    justify-content: center;
+    background: linear-gradient(to right,
+        rgba(255, 0, 126, 1) 0%,
+        rgba(134, 0, 255, 1) 100%
+    );
+    color: #ffffff;
     text-decoration: none;
-}
-
-.feed p {
-    text-decoration: none;
-}
-
-.feed svg {
-    margin-top: 15px;
-    padding-bottom: 10px;
-}
-
-.perfil {
-    position: relative;
-    display: flex;
-    padding-right: 10px;
-    border-bottom: 4px solid #ffffff;
-}
-
-.perfil a {
-    margin-top: 5px;
-    margin-left: 3px;
-    color: #a855f7;
-    text-decoration: none;
-}
-
-.perfil svg {
-    margin-top: 15px;
-    padding-bottom: 10px;
-}
-
-.perfil:hover {
-    border-bottom: 4px solid #E9D5FF;
-}
-
-.perfil:hover a{
-    color: #a855f7;
+    font-size: 16px;
+    font-weight: bold;
 }

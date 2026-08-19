@@ -9,73 +9,117 @@
 <body>
     <header>
         <h1><span class="titulo-branco">Now</span><span class="titulo-roxo">Place</span></h1>
-        <button id="mudar-tema" class="dia" type="button" aria-label="Alternar tema">
-            <div class="toggle-thumb">
-                <svg class="icon icone-sol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        <div class="abas">  
+            <a class="feed" href="index1.html">
+                <svg class="icone" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="7"r="3"stroke="#A855F7"stroke-width="2"stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 20C4 16.6863 6.68629 14 10 14C13.3137 14 16 16.6863 16 20"stroke="#A855F7"stroke-width="2"stroke-linecap="round"stroke-linejoin="round"/>
+                    <path d="M15 4.5C16.6569 4.5 18 5.84315 18 7.5C18 9.15685 16.6569 10.5 15 10.5" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18 14C20.2091 14.4903 21.5 16.3005 21.5 18.5"stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
+            </a>
 
-                <svg class="icon icone-lua" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            <a class="perfil" href="index3.html">
+                <svg class="icone" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12"cy="7"r="4"stroke="#A855F7"stroke-width="2"stroke-linecap="round"stroke-linejoin="round"/>
+                    <path d="M5 21V19C5 15.6863 7.68629 13 11 13H13C16.3137 13 19 15.6863 19 19V21"stroke="#A855F7"stroke-width="2"stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </div>
-        </button>
+            </a>
+            <button id="mudar-tema" class="dia" type="button" aria-label="Alternar tema">
+                <div class="toggle-thumb">
+                    <svg class="icon icone-sol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+
+                    <svg class="icon icone-lua" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </div>
+            </button>
+        </div>
     </header>
 
-    <div class="passo_1" id="passo_1">
-        <h1>Onde você está?</h1>
-        <p>Tire uma foto do ambiente ao seu redor</p>
-        <div id="camera-container">
-            <video id="video" autoplay playsinline></video>
-            <canvas id="canvas" style="display: none;"></canvas>
-            <br>
+    <div class="conteudo">
+        <div class="progresso">
+            <div class="linha"></div>
 
-            <button id="btn-foto">Tirar Foto</button>
+            <div class="etapa ativa">
+                <span>1</span>
+                <p>Ambiente</p>
+            </div>
+
+            <div class="etapa">
+                <span>2</span>
+                <p>Você</p>
+            </div>
+
+            <div class="etapa">
+                <span>3</span>
+                <p>Momento</p>
+            </div>
         </div>
+
+        <div class="passo passo_1" id="passo_1">
+            <h1>Onde você está?</h1>
+            <p>Tire uma foto do ambiente ao seu redor</p>
+
+            <div class="camera-container">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas"></canvas>
+            </div>
+
+            <button id="btn-foto1">Tirar Foto</button>
+            <button class="btn-proximo" onclick="proximoPasso()">Próximo</button>
+        </div>
+
+
+        <div class="passo passo_2" id="passo_2">
+            <h1>E você?</h1>
+            <p>Agora uma selfie mostrando seu rosto</p>
+
+            <div class="camera-container">
+                <video id="video2" autoplay playsinline></video>
+                <canvas id="canvas2"></canvas>
+            </div>
+
+            <button id="btn-foto2">Tirar Foto</button>
+            <button class="btn-proximo" onclick="proximoPasso()">Próximo</button>
+        </div>   
+
+        <div class="passo passo_3" id="passo_3">
+            <h1>O que você está fazendo?</h1>
+            <p>Uma frase curta sobre o momento</p>
+            <div class="fotos">
+                <img id="foto-ambiente" src="" draggable="true" class="foto ambiente">
+
+                <img id="foto-selfie" src="" draggable="true" class="foto selfie">
+            </div>
+
+            <div class="localizacao">
+                <span class="pin">📍</span>
+                <span class="label carregando" id="localizacao-label">Obtendo localização...</span>
+            </div>
+
+            <div class="input">
+                <textarea class="desc" id="descricao" maxlength="120" placeholder="Ex: Trabalhando no meu projeto favorito!"></textarea>
+                <span class="contador_caracter" id="contador">0/120</span>
+            </div>
+
+            <button type="button" 
+class="postar_button" 
+    id="btn-postar">
+    Postar Now
+</button>       
+        </div>  
     </div>
-
-    <div class="passo_2" id="passo_2">
-        <h1>E você?</h1>
-        <p>Agora uma selfie mostrando seu rosto</p>
-        <div id="camera-container">
-            <video id="video" autoplay playsinline></video>
-            <canvas id="canvas" style="display: none;"></canvas>
-            <br>
-
-            <button id="btn-foto">Tirar Foto</button>
-        </div>
-    </div>    
-
-    <div class="passo_3" id="passo_3">
-        <h1>O que você está fazendo?</h1>
-        <p>Uma frase curta sobre o momento</p>
-        <div id="camera-container">
-            <video id="video" autoplay playsinline></video>
-
-            <br>
-
-        </div>
-
-        <div class="localizacao">
-            <span class="pin">📍</span>
-            <span class="label carregando" id="localizacao-label">Obtendo localização...</span>
-        </div>
-
-        <div class="input">
-            <textarea class="desc" id="descricao" maxlength="120" placeholder="Ex: Trabalhando no meu projeto favorito!"></textarea>
-            <span class="contador_caracter" id="contador">0/120</span>
-        </div>
-    </div>  
-    
-    <button type="button" class="postar_button" onclick="tarefaController.postarNow()">Postar Now</button>
 
 
 <script src="/SCRIPTS/index.js"></script>
