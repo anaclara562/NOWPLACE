@@ -9,6 +9,26 @@
 <body>
     <header>
         <h1><span class="titulo-branco">Now</span><span class="titulo-roxo">Place</span></h1>
+        
+        <div class="progresso">
+            <div class="linha"></div>
+
+            <div class="etapa ativa">
+                <span>1</span>
+                <p>Ambiente</p>
+            </div>
+
+            <div class="etapa">
+                <span>2</span>
+                <p>Você</p>
+            </div>
+
+            <div class="etapa">
+                <span>3</span>
+                <p>Momento</p>
+            </div>
+        </div>
+
         <div class="abas">  
             <a class="feed" href="index1.html">
                 <svg class="icone" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,36 +68,21 @@
     </header>
 
     <div class="conteudo">
-        <div class="progresso">
-            <div class="linha"></div>
-
-            <div class="etapa ativa">
-                <span>1</span>
-                <p>Ambiente</p>
-            </div>
-
-            <div class="etapa">
-                <span>2</span>
-                <p>Você</p>
-            </div>
-
-            <div class="etapa">
-                <span>3</span>
-                <p>Momento</p>
-            </div>
-        </div>
-
         <div class="passo passo_1" id="passo_1">
             <h1>Onde você está?</h1>
             <p>Tire uma foto do ambiente ao seu redor</p>
 
-            <div class="camera-container">
-                <video id="video" autoplay playsinline></video>
-                <canvas id="canvas"></canvas>
-            </div>
+            <div class="content">
+                <div class="camera-container">
+                    <video id="video" autoplay playsinline></video>
+                    <canvas id="canvas"></canvas>
+                </div>
 
-            <button id="btn-foto1">Tirar Foto</button>
-            <button class="btn-proximo" onclick="proximoPasso()">Próximo</button>
+                <div class="botoes">
+                    <button id="btn-foto1">Tirar Foto</button>
+                    <button class="btn-proximo" onclick="proximoPasso()">Próximo</button>
+                </div>
+            </div>
         </div>
 
 
@@ -85,42 +90,47 @@
             <h1>E você?</h1>
             <p>Agora uma selfie mostrando seu rosto</p>
 
-            <div class="camera-container">
-                <video id="video2" autoplay playsinline></video>
-                <canvas id="canvas2"></canvas>
-            </div>
+            <div class="content">
+                <div class="camera-container">
+                    <video id="video2" autoplay playsinline></video>
+                    <canvas id="canvas2"></canvas>
+                </div>
 
-            <button id="btn-foto2">Tirar Foto</button>
-            <button class="btn-proximo" onclick="proximoPasso()">Próximo</button>
+                <div class="botoes">
+                    <button id="btn-foto2">Tirar Foto</button>
+                    <button class="btn-proximo" onclick="proximoPasso()">Próximo</button>
+                </div>
+            </div>
         </div>   
 
         <div class="passo passo_3" id="passo_3">
             <h1>O que você está fazendo?</h1>
             <p>Uma frase curta sobre o momento</p>
-            <div class="fotos">
-                <img id="foto-ambiente" src="" draggable="true" class="foto ambiente">
+            <div class="content2">
+                <div class="fotos">
+                    <img id="foto-ambiente" src="" draggable="true" class="foto ambiente">
 
-                <img id="foto-selfie" src="" draggable="true" class="foto selfie">
-            </div>
+                    <img id="foto-selfie" src="" draggable="true" class="foto selfie">
+                </div>
 
-            <div class="localizacao">
-                <span class="pin">📍</span>
-                <span class="label carregando" id="localizacao-label">Obtendo localização...</span>
-            </div>
+                <div class="coluna">
+                    <div class="localizacao">
+                        <span class="pin">📍</span>
+                        <span class="label carregando" id="localizacao-label">Obtendo localização...</span>
+                    </div>
 
-            <div class="input">
-                <textarea class="desc" id="descricao" maxlength="120" placeholder="Ex: Trabalhando no meu projeto favorito!"></textarea>
-                <span class="contador_caracter" id="contador">0/120</span>
-            </div>
+                    <div class="input">
+                        <textarea class="desc" id="descricao" maxlength="120" placeholder="Ex: Trabalhando no meu projeto favorito!"></textarea>
+                        <span class="contador_caracter" id="contador">0/120</span>
+                    </div>
 
-            <button type="button" 
-class="postar_button" 
-    id="btn-postar">
-    Postar Now
-</button>       
+                    <button type="button" class="postar_button" id="btn-postar">
+                        Postar Now
+                    </button>
+                </div>
+            </div>       
         </div>  
     </div>
-
 
 <script src="/SCRIPTS/index.js"></script>
 </body>
