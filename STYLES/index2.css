@@ -199,6 +199,25 @@ header .icone {
 }
 
 
+/* USUARIO */
+.conteudo label {
+  font-family: 'Poppins', sans-serif;
+}
+
+.conteudo input {
+  font-family: 'Poppins', sans-serif;
+  width: auto;
+}
+
+.usuario-container {
+  margin-top: 5px;
+  display: flex;
+  margin: auto;
+  gap: 20px;
+  justify-content: center;
+}
+
+
 /* FOTOS */
 .fotos {
   position: relative;

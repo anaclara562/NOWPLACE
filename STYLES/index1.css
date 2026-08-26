@@ -188,3 +188,91 @@ header .icone {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
 }
+
+#posts-container {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 25px;
+    padding: 30px;
+    justify-content: center;
+}
+
+.post {
+    width: 320px;
+    background: white;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.fotos-post {
+    position: relative;
+    height: 300px;
+}
+
+.fotos-post img {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.foto-selfie-post {
+    width: 75%;
+    height: 240px;
+    left: 10%;
+    top: 10px;
+    z-index: 1;
+}
+
+.foto-ambiente-post {
+    width: 45%;
+    height: 130px;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    border: 4px solid white;
+}
+
+.descricao-post {
+    color: #4214be;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.data-post {
+    color: #999;
+    font-size: 12px;
+}
+
+.info-post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+
+.info-esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.usuario-post.tema-escuro p  {
+    color: #17121c;
+}
+
+.btn-apagar {
+    margin-top: 14px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+}
+
+.btn-apagar:hover {
+    opacity: 1;
+}
